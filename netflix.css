@@ -143,7 +143,6 @@ body {
 
 .moviescontainer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     gap: 20px;
@@ -345,6 +344,8 @@ body {
 
 
 @media (max-width: 480px) {
+
+
     .navbar {
         padding: 15px 20px;
         position: relative;
@@ -398,27 +399,56 @@ body {
         margin: 0;
     }
 
+
     #check:checked~.nav-links {
         left: 0;
     }
+
 
     #check:checked~.checkbtn #menu {
         display: none;
     }
 
     #check:checked~.checkbtn #cancel {
-        display: flex;
+        display: inline-block;
     }
+
+
+
     .hero {
         flex-direction: column;
         text-align: center;
         padding: 20px;
     }
+
+    .hero-content {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .hero-title {
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .hero-button {
+        margin: 10px auto;
+    }
+
     .hero-image {
         width: 100%;
         padding: 10px;
     }
-    .moviehead,.serieshead,.gameshead {
+
+
+    .moviehead,
+    .serieshead,
+    .gameshead {
         font-size: 25px;
         text-align: center;
         margin-left: 0;
@@ -449,10 +479,19 @@ body {
         margin: 5px;
     }
 
-      .products-series {
+    .product-movie:hover {
+        transform: scale(1.05);
+    }
+
+    .products-series {
         display: grid;
         gap: 15px;
         padding: 15px;
+    }
+
+    .product-card {
+        width: 100%;
+        overflow: hidden;
     }
 
     .movie-series {
@@ -468,4 +507,21 @@ body {
     }
 
 
+    .contact {
+        padding: 25px 20px;
+    }
+
+    .contactinfo {
+        margin-left: 0;
+    }
+
+    .contacthead {
+        font-size: 25px;
+    }
+
+
+    .footer {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
